@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/artist.css">
+    <title>{{.Arti.Name}}</title>
+</head>
+<body>
+        <div class="band-card">
+            <img src="{{.Arti.Image}}" alt="{{.Arti.Name}} " class="band-image">
+            <div class="band-info">
+              <h1 class="band-name">{{.Arti.Name}} </h1>
+              <div class="band-members">
+                <h2>Members:</h2>
+                <ul>
+                    {{range .Arti.Members }}
+                    <li> {{.}}</li>
+                    {{end}}
+                </ul>
+              </div>
+              <div class="band-details">
+                <p><strong>Creation date:</strong> {{.Arti.CreationDate}}</p>
+                <p><strong>First album:</strong> {{.Arti.FirstAlbum}}</p>
+                <h2>Upcoming dates and locations:</h2>
+                <ul>
+                    {{range $index, $elem:= .Rela.DatesLocations}}
+                    <li> {{$index}} - {{range $elem}}
+                      {{.}},
+                      {{end}}</li>
+                    {{end}}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <a href="/"><button>GO HOME</button></a>
+ 
+</div>
+
+</body>
+</html>

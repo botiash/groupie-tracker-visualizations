@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/index.css">
+    
+    <title>groupie-tracker</title>
+</head>
+<header>
+    <div style="text-align:center">
+        <a href="https://01.alem.school/intra/alem/div-01/visualizations?event=599"><h1>groupie-tracker</h1> </a>
+    </div>
+</header>
+<body>
+    <div class="AllArtist">
+    {{range  .}}
+    
+        <div class="card" >
+            <a href="/artist?id={{.Id}}">
+            <h2 class="card-title"> {{.Name}} </h2>
+            <img src="{{.Image}}" alt="{{.Name}} + image">
+            </a>
+        </div>
+    {{end}}
+    </div>
+
+</body>
+</html>

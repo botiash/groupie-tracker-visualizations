@@ -1,0 +1,56 @@
+html {
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(18,50,93,1) 46%, rgba(0,212,255,1) 100%);
+text-align: center;
+}
+
+
+.band-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid rgb(2, 24, 152);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .band-image {
+    width: 30%;
+    height: auto;
+  }
+  
+  .band-info {
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .band-name {
+    margin: 0;
+    font-size: 2em;
+  }
+  
+  .band-members h2 {
+    margin-top: 0;
+  }
+  
+  .band-details h2 {
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .band-card {
+      flex-direction: column;
+    }
+  
+    .band-image {
+      width: 100%;
+    }
+  
+    .band-info {
+      width: 100%;
+    }
+  }
+  
