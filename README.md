@@ -31,5 +31,5 @@ go run ./cmd
 
 
 Authors: 
-@botaakylbek0 && diyar.ildart
+@botiash && diyar.ildart
 
